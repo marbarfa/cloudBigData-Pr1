@@ -6,7 +6,7 @@ class SearchMercadoLibreController {
 
     private static String SEARCH_API = "https://api.mercadolibre.com/sites/MLU/search?limit=20&q="
     private static String ITEMS_API = "https://api.mercadolibre.com/items/"
-    def rest = new RestBuilder();
+    def rest = new RestBuilder(proxy:['httpproxy.fing.edu.uy':3128]);
 
     def index() {
         def query = params.query
