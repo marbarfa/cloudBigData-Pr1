@@ -1,7 +1,7 @@
 class UrlMappings {
 
-	static mappings = {
-        "/$controller/$action?/$id?(.$format)?"{
+    static mappings = {
+        "/$controller/$action?/$id?(.$format)?" {
             constraints {
                 // apply constraints here
             }
@@ -11,6 +11,15 @@ class UrlMappings {
             controller = "searchMercadoLibre"
             action = "index"
         }
-        "500"(view:'/error')
-	}
+        "/api" {
+            controller = "compDistAPI"
+            action = "index"
+        }
+
+        "/api/query"(controller: 'compDistAPI') {
+            action = [GET: "getMasPosts"]
+        }
+
+        "500"(view: '/error')
+    }
 }

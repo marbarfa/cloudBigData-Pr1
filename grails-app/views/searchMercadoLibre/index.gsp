@@ -10,7 +10,7 @@
 <g:form>
     <div id="status" style="text-align: center">
         <h1>Search in MercadoLibre:</h1><g:field type="string" name="query"/>
-    <g:actionSubmit action="index" value="Buscar!"/>
+    <g:actionSubmit action="index" value="Buscar!" />
     </div>
 
     <div id="content_info" style="text-align: center">
